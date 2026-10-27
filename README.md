@@ -151,6 +151,10 @@ see [README](./flatpak/README.md)
 
 Running from source should be as simple as `uv run gajim`.
 
+_However,_ the `uv` approach may cause issues in IDEs or IDE versions that do not appear to recognize `uv` environments as valid Python installations.
+
+The original method, which resolves this but is subject to future Python version problems, works as follows:
+
 To create a virtualenv, execute
 
     ./scripts/dev_env.sh
