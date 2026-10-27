@@ -189,7 +189,7 @@ APP_ACTIONS = [
     ('features', None),
     ('file-transfer', None),
     ('forget-groupchat', 'a{sv}'),
-    ('join-support-chat', None),
+    ('throw-test-exception', None),
     ('manage-proxies', None),
     ('open-link', 'as'),
     ('plugins', None),

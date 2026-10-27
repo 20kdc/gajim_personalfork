@@ -125,7 +125,6 @@ _dependencies = {
     'IDLE': False,
     'APPINDICATOR': False,
     'AYATANA_APPINDICATOR': False,
-    'SENTRY_SDK': False,
 }
 
 _tasks: dict[int, list[Any]] = defaultdict(list)
@@ -287,16 +286,6 @@ def detect_dependencies() -> None:
         from gi.repository import AyatanaAppIndicator3  # noqa: F401
         _dependencies['AYATANA_APPINDICATOR'] = True
     except (ImportError, ValueError):
-        pass
-
-    # SENTRY SDK
-    try:
-        import sentry_sdk  # noqa: F401
-        _dependencies['SENTRY_SDK'] = True
-    except Exception:
-        # Sentry has a lot of side effects on import
-        # make sure this optional dependency does not prevent
-        # Gajim from starting
         pass
 
     # Print results

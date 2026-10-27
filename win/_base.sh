@@ -110,7 +110,6 @@ git+https://dev.gajim.org/gajim/omemo-dr.git
 python-gnupg
 qrcode
 css_parser
-sentry-sdk
 emoji
 winrt-Windows.ApplicationModel
 winrt-Windows.Foundation

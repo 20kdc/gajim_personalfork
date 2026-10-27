@@ -49,7 +49,6 @@ pygobject-stubs --no-cache-dir --config-settings=config=Gtk3,Gdk3,GtkSource4
 python-gnupg
 qrcode
 css_parser
-sentry-sdk
 emoji
 winrt-Windows.ApplicationModel
 winrt-Windows.Foundation

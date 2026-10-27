@@ -58,7 +58,6 @@ Recommends:
     gstreamer1.0-gtk3,
     notification-daemon,
     pulseaudio-utils | alsa-utils | sox | oss4-base,
-    python3-sentry-sdk,
 Suggests:
     libxss1,
 Breaks: gajim

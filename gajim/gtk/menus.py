@@ -80,7 +80,7 @@ def get_main_menu() -> GajimMenu:
         (_('_Wiki (Online)'), 'app.content', None),
         (_('FA_Q (Online)'), 'app.faq', None),
         (_('_Privacy Policy (Online)'), 'app.privacy-policy', None),
-        (_('Join Support Chat'), 'app.join-support-chat', None),
+        (_('Throw Test Exception'), 'app.throw-test-exception', None),
         (_('_Keyboard Shortcuts'), 'app.shortcuts', None),
         (_('_Features'), 'app.features', None),
         (_('_About'), 'app.about', None),

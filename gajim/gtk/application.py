@@ -54,7 +54,6 @@ from gajim.common import idle
 from gajim.common.application import CoreApplication
 from gajim.common.const import GAJIM_FAQ_URI
 from gajim.common.const import GAJIM_PRIVACY_POLICY_URI
-from gajim.common.const import GAJIM_SUPPORT_JID
 from gajim.common.const import GAJIM_WIKI_URI
 from gajim.common.exceptions import GajimGeneralException
 from gajim.common.helpers import load_json
@@ -408,7 +407,7 @@ class GajimApplication(Gtk.Application, CoreApplication):
             ('shortcuts', self._on_shortcuts_action),
             ('features', self._on_features_action),
             ('content', self._on_content_action),
-            ('join-support-chat', self._on_join_support_chat),
+            ('throw-test-exception', self._on_throw_test_exception),
             ('about', self._on_about_action),
             ('faq', self._on_faq_action),
             ('privacy-policy', self._on_privacy_policy_action),
@@ -733,14 +732,9 @@ class GajimApplication(Gtk.Application, CoreApplication):
         open_uri(GAJIM_WIKI_URI)
 
     @staticmethod
-    def _on_join_support_chat(_action: Gio.SimpleAction,
+    def _on_throw_test_exception(_action: Gio.SimpleAction,
                               _param: GLib.Variant | None) -> None:
-        accounts = app.settings.get_active_accounts()
-        if len(accounts) == 1:
-            app.window.show_add_join_groupchat(
-                accounts[0], GAJIM_SUPPORT_JID)
-            return
-        open_window('StartChatDialog', initial_jid=GAJIM_SUPPORT_JID)
+        raise Exception('This is a test exception.')
 
     @staticmethod
     def _on_faq_action(_action: Gio.SimpleAction,

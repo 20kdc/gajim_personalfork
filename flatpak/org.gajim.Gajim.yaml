@@ -254,15 +254,6 @@ modules:
         url: https://files.pythonhosted.org/packages/py3/c/certifi/certifi-2024.8.30-py3-none-any.whl
         sha256: 922820b53db7a7257ffbda3f597266d435245903d80737e34f8a45ff3e3230d8
 
-  - name: python3-sentry-sdk
-    buildsystem: simple
-    build-commands:
-      - pip3 install sentry_sdk-2.14.0-py2.py3-none-any.whl
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/py2.py3/s/sentry_sdk/sentry_sdk-2.14.0-py2.py3-none-any.whl
-        sha256: b8bc3dc51d06590df1291b7519b85c75e2ced4f28d9ea655b6d54033503b5bf4
-
   - name: python3-typing-extensions
     buildsystem: simple
     build-commands:

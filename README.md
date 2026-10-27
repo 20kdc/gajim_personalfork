@@ -1,5 +1,17 @@
 [[_TOC_]]
 
+This is my (20kdc's) personal fork of Gajim 1.9.5 (the last released Gtk3 version).
+
+I prefer the GTK 3 Gajim's interface, but for long-term use I will need to maintain it myself.
+
+As such you can expect this fork to diverge as time goes on.
+
+In particular I expect to eventually have to make a choice between porting it to GTK 2 or installing GTK 3 myself.
+
+For upstream, see <https://dev.gajim.org/gajim/gajim> or <https://github.com/gajim/gajim>.
+
+This README is modified from the original, so keep in mind that who wrote any given note is variable.
+
 ## Requirements
 
 ### Runtime Requirements
@@ -13,6 +25,9 @@
 - [GtkSourceView](https://gitlab.gnome.org/GNOME/gtksourceview)
 - [keyring](https://pypi.org/project/keyring/)
 - [nbxmpp](https://pypi.org/project/nbxmpp/) (>=5.0.4)
+    * 20kdc: The use of nbxmpp 5 here diverges from Debian 13 packages, which ship 6. \
+      However, this is subject to a 'treadmill' issue; nbxmpp keeps increasing its version. \
+      Therefore, the smart move is to stand ground.
 - [omemo-dr](https://dev.gajim.org/gajim/omemo-dr) (>=1.0.0)
 - [packaging](https://pypi.org/project/packaging/)
 - [Pango](https://gitlab.gnome.org/GNOME/pango) (>=1.50.0)
@@ -31,7 +46,6 @@
 ### Optional Runtime Requirements
 
 - D-Bus running to have gajim-remote working
-- [sentry-sdk](https://pypi.org/project/sentry-sdk/) for Sentry error reporting to dev.gajim.org (users decide whether to send reports or not)
 - [gspell](https://gitlab.gnome.org/GNOME/gspell) and hunspell-LANG where lang is your locale eg. en, fr etc
 - [libsecret](https://gitlab.gnome.org/GNOME/libsecret/) for GNOME Keyring or KDE support as password storage
 - [GUPnP-IGD](https://gitlab.gnome.org/GNOME/gupnp) for better NAT traversing
@@ -95,8 +109,11 @@ pip wheel --no-deps --use-pep517 -w dist .
 
 ### Installing with `pip`
 
+**This is the 'actual' install command for end use.**
+
 ```bash
 pip install .
+sudo pip install . --break-system-packages # system-global, accounting for Debian 'oddities'
 ```
 
 ### Installing the wheel
@@ -126,26 +143,9 @@ options:
 
 ## Packages and install instructions
 
-### Packages
-
-- [Arch Linux](https://www.archlinux.org/packages/extra/any/gajim/)
-- [Debian](https://packages.debian.org/stable/gajim)
-- [Fedora](https://packages.fedoraproject.org/pkgs/gajim/)
-- [Ubuntu](https://packages.ubuntu.com/gajim)
-- [FreeBSD](https://www.freshports.org/net-im/gajim/)
-
 ### Flatpak
 
 see [README](./flatpak/README.md)
-
-### Snapshots
-
-- [Daily Linux](https://www.gajim.org/downloads/snap/)
-- [Daily Windows](https://gajim.org/downloads/snap/win)
-
-### Mac
-
-see [Wiki](https://dev.gajim.org/gajim/gajim/-/wikis/help/Gajim-on-macOS)
 
 ## Developing
 
