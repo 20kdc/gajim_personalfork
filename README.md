@@ -149,7 +149,9 @@ see [README](./flatpak/README.md)
 
 ## Developing
 
-To create a virtualenv you can execute
+Running from source should be as simple as `uv run gajim`.
+
+To create a virtualenv, execute
 
     ./scripts/dev_env.sh
 

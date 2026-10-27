@@ -27,6 +27,7 @@ venv/
 .venv/
 node_modules/
 .flatpak-builder
+uv.lock
 
 # IDE files
 

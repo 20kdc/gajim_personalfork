@@ -55,7 +55,6 @@ dev = [
   "ruff>=0.6.8",
   "codespell[toml]>=2.3.0",
   "isort>=5.13.2",
-  "nbxmpp @ git+https://dev.gajim.org/gajim/python-nbxmpp.git",
   "PyGObject-stubs @ git+https://github.com/pygobject/pygobject-stubs.git",
   "python-gitlab",
 ]
@@ -93,6 +92,9 @@ typeCheckingMode = "strict"
 reportUnnecessaryTypeIgnoreComment = "error"
 reportPropertyTypeMismatch = "error"
 reportMissingModuleSource = "none"
+
+[tool.uv]
+config-settings-package = { pygobject-stubs = { config = "Gtk3,Gdk3,Soup2" } }
 
 exclude = [
   "**/__pycache__",
