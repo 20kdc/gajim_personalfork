@@ -94,7 +94,8 @@ reportPropertyTypeMismatch = "error"
 reportMissingModuleSource = "none"
 
 [tool.uv]
-config-settings-package = { pygobject-stubs = { config = "Gtk3,Gdk3,Soup2" } }
+# see-also: scripts/dev_env.sh
+config-settings-package = { pygobject-stubs = { config = "Gtk3,Gdk3,Soup3,GtkSource4" } }
 
 exclude = [
   "**/__pycache__",
